@@ -26,7 +26,7 @@ rpiName = socket.gethostname()
 print(f"name = {rpiName}")
 
 # vs = VideoStream(usePiCamera=True).start()
-vs = VideoStream(src=0).start()	# use webcam instead of picamera
+vs = VideoStream(-1).start()	# use webcam instead of picamera
 time.sleep(2.0)
  
 print("start loop")
@@ -35,3 +35,4 @@ while True:
 	frame = vs.read()
 	print("frame", frame)
 	sender.send_image(rpiName, frame)
+vs.release()
