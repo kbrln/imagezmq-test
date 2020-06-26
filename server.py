@@ -171,3 +171,4 @@ while True:
 # do a bit of cleanup
 cv2.destroyAllWindows()
 
+# python server.py --prototxt MobileNetSSD_deploy.prototxt --model MobileNetSSD_deploy.caffemodel --montageW 2 --montageH 2
